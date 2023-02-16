@@ -54,7 +54,7 @@ export default class Form extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch("http://localhost:3000/api/contact", {
+    fetch("https://inner-balance-institute-server.vercel.app/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
