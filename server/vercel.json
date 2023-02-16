@@ -1,0 +1,8 @@
+{
+  "public": false,
+  "version": 1,
+  "env": {
+    "GMAIL_ADDRESS": "contact.innerbalanceinstitute@gmail.com",
+    "GMAIL_PASSWORD": "kwslavzegtwixwpw"
+  }
+}
