@@ -5,7 +5,7 @@ dotenv.config();
 
 const router = express.Router();
 
-const contactAddress = "hemsundar.paranthaman@outlook.com";
+const contactAddress = "Office@innerbalanceinstitute.com";
 
 const mailer = nodemailer.createTransport({
   service: "Gmail",
