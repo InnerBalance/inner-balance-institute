@@ -136,8 +136,9 @@ const Modal = () => {
                   <TabList>
                     <Tab>
                       <i className="fal fa-calendar text-lg mr-2"></i>
-                      <span className="hidden md:inline">Request</span>
-                      Appointment
+                      <span className="hidden md:inline">
+                        Request Appointment
+                      </span>
                     </Tab>
                     <Tab>
                       <i className="fal fa-envelope text-lg mr-2"></i>

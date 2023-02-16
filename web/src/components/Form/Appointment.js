@@ -54,11 +54,12 @@ export default class Form extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch("/", {
+    fetch("http://localhost:3000/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
+        from: "Appoinment",
         ...this.state,
       }),
     })
@@ -138,14 +139,14 @@ export default class Form extends Component {
 
           <div className="field">
             <fieldset>
-              <legend className="label" htmlFor="preferred-days">
+              <legend className="label" htmlFor="preferredDays">
                 What day(s) do you prefer?
               </legend>
               <div className="grid grid-cols-4 md:flex gap-2 md:gap-0 md:space-x-3 mt-1">
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
-                    name="preferred-days"
+                    name="preferredDays"
                     value="Any"
                     onChange={this.handleChange}
                     required={true}
@@ -156,7 +157,7 @@ export default class Form extends Component {
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
-                    name="preferred-days"
+                    name="preferredDays"
                     value="Monday"
                     onChange={this.handleChange}
                   />
@@ -166,7 +167,7 @@ export default class Form extends Component {
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
-                    name="preferred-days"
+                    name="preferredDays"
                     value="Tuesday"
                     onChange={this.handleChange}
                   />
@@ -176,7 +177,7 @@ export default class Form extends Component {
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
-                    name="preferred-days"
+                    name="preferredDays"
                     value="Wednesday"
                     onChange={this.handleChange}
                   />
@@ -186,7 +187,7 @@ export default class Form extends Component {
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
-                    name="preferred-days"
+                    name="preferredDays"
                     value="Thursday"
                     onChange={this.handleChange}
                   />
@@ -196,7 +197,7 @@ export default class Form extends Component {
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
-                    name="preferred-days"
+                    name="preferredDays"
                     value="Friday"
                     onChange={this.handleChange}
                   />
@@ -206,7 +207,7 @@ export default class Form extends Component {
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
-                    name="preferred-days"
+                    name="preferredDays"
                     value="Saturday"
                     onChange={this.handleChange}
                   />
@@ -216,7 +217,7 @@ export default class Form extends Component {
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
-                    name="preferred-days"
+                    name="preferredDays"
                     value="Sunday"
                     onChange={this.handleChange}
                   />
@@ -228,14 +229,14 @@ export default class Form extends Component {
 
           <div className="field">
             <fieldset>
-              <legend className="label" htmlFor="preferred-time">
+              <legend className="label" htmlFor="preferredTime">
                 What time(s) do you prefer?
               </legend>
               <div className="grid grid-cols-4 md:flex gap-2 md:gap-0 md:space-x-3 mt-1">
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
-                    name="preferred-time"
+                    name="preferredTime"
                     value="Any"
                     onChange={this.handleChange}
                     required={true}
@@ -246,7 +247,7 @@ export default class Form extends Component {
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
-                    name="preferred-time"
+                    name="preferredTime"
                     value="Morning"
                     onChange={this.handleChange}
                   />
@@ -256,7 +257,7 @@ export default class Form extends Component {
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
-                    name="preferred-time"
+                    name="preferredTime"
                     value="Afternoon"
                     onChange={this.handleChange}
                   />
@@ -266,7 +267,7 @@ export default class Form extends Component {
                 <label className="relative cursor-pointer">
                   <input
                     type="radio"
-                    name="preferred-time"
+                    name="preferredTime"
                     value="Evening"
                     onChange={this.handleChange}
                   />

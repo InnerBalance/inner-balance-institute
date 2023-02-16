@@ -54,11 +54,12 @@ export default class Form extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch("/", {
+    fetch("http://localhost:3000/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
+        from: "General Inquiry",
         ...this.state,
       }),
     })
