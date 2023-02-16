@@ -25,9 +25,15 @@ router.post("/", function (req, res) {
         <b>Name</b>: ${req.body.name}<br />
         <b>Phone</b>: ${req.body.phone}<br />
         <b>Email</b>: ${req.body.email}<br />
-        <b>Preferred Days</b>: ${req.body.preferredDays}<br />
-        <b>Preferred Time</b>: ${req.body.preferredTime}<br />
-        <b>Preferred Time</b>: ${req.body.message}<br />
+        ${
+          req.body.from === "Appoinment"
+            ? `
+            <b>Preferred Days</b>: ${req.body.preferredDays}<br />
+            <b>Preferred Time</b>: ${req.body.preferredTime}<br />
+          `
+            : ""
+        }
+        <b>Message</b>: ${req.body.message}<br />
       `,
     },
     function (err) {
