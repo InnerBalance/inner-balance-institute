@@ -16,12 +16,19 @@ const mailer = nodemailer.createTransport({
 });
 
 router.post("/", function (req, res) {
+  console.log(req.body);
   mailer.sendMail(
     {
-      from: req.body.from,
       to: [contactAddress],
-      subject: req.body.subject || "[No subject]",
-      html: req.body.message || "[No message]",
+      subject: req.body.from,
+      html: `
+        <b>Name</b>: ${req.body.name}<br />
+        <b>Phone</b>: ${req.body.phone}<br />
+        <b>Email</b>: ${req.body.email}<br />
+        <b>Preferred Days</b>: ${req.body.preferredDays}<br />
+        <b>Preferred Time</b>: ${req.body.preferredTime}<br />
+        <b>Preferred Time</b>: ${req.body.message}<br />
+      `,
     },
     function (err) {
       if (err) return res.status(500).send(err);
