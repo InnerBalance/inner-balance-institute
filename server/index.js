@@ -1,11 +1,11 @@
 import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 dotenv.config();
-import bodyParser from "body-parser";
 import express from "express";
 import nodemailer from "nodemailer";
 
 const app = express();
-app.use(bodyParser.urlencoded());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const contactAddress = "hemsundar.paranthaman@outlook.com";
 
@@ -18,7 +18,7 @@ const mailer = nodemailer.createTransport({
 });
 
 app.post("/contact", function (req, res) {
-  console.log(req);
+  console.log(req.body);
   mailer.sendMail(
     {
       from: req.body.from,
