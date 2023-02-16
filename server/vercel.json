@@ -3,5 +3,17 @@
   "env": {
     "GMAIL_ADDRESS": "contact.innerbalanceinstitute@gmail.com",
     "GMAIL_PASSWORD": "kwslavzegtwixwpw"
-  }
+  },
+  "builds": [
+    {
+      "src": "./index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ]
 }
