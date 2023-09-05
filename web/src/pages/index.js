@@ -12,6 +12,7 @@ import Testimonials from "../components/Repeating/Testimonials";
 import CallToAction from "../components/Repeating/CTA";
 import ButtonSolid from "../components/Button/ButtonSolid";
 import ButtonUnderline from "../components/Button/ButtonUnderline";
+import Analytics from "../components/Analytics/Analytics.jsx";
 
 const Page = ({ data }) => {
   const heroFullWidthImages = [
@@ -69,7 +70,7 @@ const Page = ({ data }) => {
         openGraphImage={data.openGraphImage.publicURL}
         twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
-
+     <Analytics />
       <HeroFullWidth
         backgroundImages={heroFullWidthImages}
         backgroundPosition="50% 25%"
