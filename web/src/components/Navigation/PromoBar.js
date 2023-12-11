@@ -1,6 +1,7 @@
 import React from "react";
 
 const PromoBar = () => {
+  return null
   return (
     <button
       id="promo-bar"
