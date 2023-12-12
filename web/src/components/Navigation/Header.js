@@ -22,16 +22,18 @@ const Header = ({ headerStyle, headerLinkColor, headerHasBorder }) => {
       // calculate #offcanvas-navigation menu offset top
       offcanvasNavigation.style.top =
         siteNavigation.offsetHeight + mainNavigation.offsetHeight + "px";
-
-      bodyContent.style.paddingTop = promoBar.offsetHeight + "px";
+      if (promoBar) {
+        bodyContent.style.paddingTop = promoBar.offsetHeight + "px";
+      }
     };
 
     const handleResize = () => {
       // calculate #offcanvas-navigation offset top on resize
       offcanvasNavigation.style.top =
         siteNavigation.offsetHeight + mainNavigation.offsetHeight + "px";
-
-      bodyContent.style.paddingTop = promoBar.offsetHeight + "px";
+      if (promoBar) {
+        bodyContent.style.paddingTop = promoBar.offsetHeight + "px";
+      }
     };
 
     const handleScroll = () => {
