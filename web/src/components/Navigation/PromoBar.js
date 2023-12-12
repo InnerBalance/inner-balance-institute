@@ -10,8 +10,7 @@ const PromoBar = () => {
     >
       <div className="container">
         <p className="text-white group-hover:text-black text-sm font-semibold mb-0 transition-colors duration-300 ease-linear">
-          SPECIAL! $57 Exam For New & Returning Patients. Includes: Consultation
-          + Digital X-Rays + Follow-Up Care Plan
+          San Diego's Leading Chiropractor and Pain Management Clinic
         </p>
       </div>
     </button>
