@@ -63,7 +63,7 @@ const Page = ({ data }) => {
               />
             </div>
             <div>
-              <h1>Car Accident Chiropractors</h1>
+              <h1>Car Accident Chiropractor</h1>
               <p className="text-primary-900 md:text-lg mb-0">
                 The average auto accident can age the human spine by 10 years.
                 If you have recently been involved in a car accident or auto
